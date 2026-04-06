@@ -1,0 +1,31 @@
+1. Why is cleaning done before joining tables?
+Cleaning is important because real-world data usually has issues like missing values, duplicates, or wrong data types.
+If we directly join without fixing these, the results can be inaccurate or misleading. 
+So, cleaning ensures the data is reliable before combining it.
+
+2. What would go wrong if null keys are not removed?
+If there are null values in the join keys, those records won’t match with anything during the join.
+This means some data will be left out, which can lead to incomplete or incorrect results.
+
+3. How did you decide the join order?
+I started by working with smaller or already filtered datasets and then joined them with larger tables.
+This approach reduces the amount of data being processed and makes the joins more efficient.
+
+4. Which step was most difficult and why?
+Handling null values and fixing data types was the most challenging part.
+Even small mistakes in these steps can impact the entire dataset and lead to wrong outputs.
+
+5. How is SQL logic similar to PySpark?
+Both SQL and PySpark follow similar concepts like selecting data, filtering, joining tables, and grouping.
+The main difference is that PySpark is designed to handle very large datasets in a distributed way.
+
+6. What challenges will appear with large data?
+With large datasets, processing can become slow, memory usage increases, and joins can take more time.
+That’s why optimization techniques are important to keep everything running efficiently.
+
+7. Can you explain your pipeline in simple steps?
+First, I load the data from source files.
+Then, I clean it by removing nulls and correcting data types.
+After that, I join the required datasets.
+Next, I apply transformations like filtering and aggregations.
+Finally, I store the processed data for further use.
